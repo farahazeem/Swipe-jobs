@@ -1,0 +1,121 @@
+.container { 
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    
+        #top { 
+            background-color: rgb(100, 95, 95);
+            height: 60px;
+    
+            i { 
+                font-size: 30px;
+                color:white;
+                margin-top: 15px;
+                margin-right: 20px;
+                float: right;
+            }
+        }
+    
+        #middle { 
+            background-color: rgb(22, 198, 241);
+            height: 50px;
+    
+            #jobs-available { 
+                margin-top: 15px;
+                border: 1px solid rgb(19, 181, 218);
+                background-color: rgb(19, 181, 218);
+                color: white;
+                padding: 5px;
+                margin-left: 10px;
+                font-size:20px;
+                margin-top: 8px;
+            }
+        }
+    
+        #main { 
+            border-radius: 7px;
+            background-color: white;
+            border: 1px solid lightgrey;
+            padding-left: 10px;
+            flex-grow : 1 !important;
+    
+            div { 
+    
+               
+                div { 
+
+                    margin-left:140px;
+                    
+    
+                    h3 { 
+                        color: rgb(61, 58, 58);
+                    }
+    
+                    p { 
+                        color:rgb(151, 150, 150);
+                    }
+    
+                    .shifts { 
+                        color:rgb(151, 150, 150);
+                        font-weight:bold;
+                    }
+                }
+    
+                #notify { 
+                    font-weight: bold;
+                    margin-top: 0px;
+                }
+    
+                .table { 
+                    display: table;
+                    color:rgb(151, 150, 150);
+                    margin-left: 0px;
+    
+                    .row { 
+                        display: table-row;
+    
+                        .cell { 
+                            display: table-cell;
+                            padding-right: 10px;
+                        }
+    
+                        
+                    }
+                }
+    
+                hr { 
+                    margin-right: 10px;
+                    height: 1px;
+                    background-color: rgb(201, 198, 198);
+                }
+
+                .para {
+                    color: rgb(126, 123, 123);
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    
+                }
+    
+                a { 
+                    color:rgb(17, 162, 206);
+                }
+
+                .address {
+                    font-weight: bold;
+                }
+    
+                #later { 
+                    margin-top: 50px;
+                    text-decoration: none;
+    
+                }
+    
+                #now { 
+                    margin-right: 10px;
+                    float: right;
+                    text-decoration: none;
+    
+                }
+            }
+        }
+    }

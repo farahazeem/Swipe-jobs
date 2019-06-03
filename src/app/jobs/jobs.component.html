@@ -1,0 +1,47 @@
+<div class="container">
+  <div id="top">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </div>
+  <div id="middle">
+    <button id="jobs-available">Jobs Available</button>
+  </div>
+  <div id="main">
+    <div *ngFor='let job of Jobs'>
+      <img width="130" alt="Company Logo" src="{{job.company.logo}}"
+        align="left" />
+      <div>
+        <h3>{{job.title}}</h3>
+        <p>{{job.company.name | uppercase}}</p>
+        <p>{{centsToDollars(job.wagePerHourInCents) | currency }} /hour</p>
+        <p class="shifts">{{ getDate(job.shifts[0].startDate) | date:'E, LLL d' }} - {{ getDate(job.shifts[job.shifts.length - 1].startDate)
+          | date:'E, LLL d' }}</p>
+      </div>
+      <br>
+      <p id="notify">If you take this job you are agreeing to work ALL DAYS.</p>
+
+      <div class="table">
+        <div class="row" *ngFor="let shift of shifts">
+          <span class="cell">{{ getDate(shift) | date:'E'}},</span>
+          <span class="cell">{{getDate(shift) | date:'LLL d'}}</span>
+          <span calls="cell">{{getTime(shift) | date:'shortTime'}} PST</span>
+        </div>
+      </div>
+      
+      <hr>
+      <p class="para">Location:</p>
+      
+      <a href="" class="address">{{ job.company.address }}</a>
+      <br><br>
+      <hr>
+      <p class="para">Branch:</p>
+      <p class="para">{{ job.branch }}</p>
+      
+      <a href="">{{job.branchPhoneNumber}}</a>
+      <br><br>
+      <hr>
+      <br><br>
+      <a href="" id="later">NO THANKS</a>
+      <a href="" id="now">I'LL TAKE IT</a>
+    </div>
+  </div>
+</div>
